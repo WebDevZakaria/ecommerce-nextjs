@@ -16,21 +16,16 @@ export default function Nav({ user }: Session){
 
                     <li className='bg-teal-600 text-white py-2 px-4 rounded-md'>
                         <button onClick={() => signIn()}>Sign In</button>
-
                     </li>
-
                 )}
-                {user && (
-                    
+                
+                {user && ( 
                     <li>
-
                         <Image src= {user?.image as string} alt={user.name as string} width={48} height={48} className='rounded-full' />
-
                     </li>
                    
 
                 )}
-
                 
             </ul>
 
