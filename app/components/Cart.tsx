@@ -23,9 +23,9 @@ export default function Cart(){
          onClick={() =>cartStore.toggleCart()} 
          className="fixed w-full h-screen left-0 top-0 bg-black/25">
 
-            <motion.div layout onClick={(e) => e.stopPropagation()} className="bg-white absolute right-0 top-0 w-1/4 h-screen p-12 overflow-y-scroll text-gray-700">
+            <motion.div layout onClick={(e) => e.stopPropagation()} className="bg-white absolute right-0 top-0  h-screen p-12 overflow-y-scroll text-gray-700 w-full lg:w-2/5">
 
-                <h1 className="text-center text-lg font-bold py-4 mb-4">Here is you shopping list </h1>
+               <button onClick={() =>cartStore.toggleCart()} className="text-sm font-bold pb-12">Back To Store 👈</button>
                 {cartStore.cart.map((item) =>(
                     <motion.div layout className = 'flex py-4 gap-4' key={item.id}>
                         <Image className="rounded-md h-24" src = {item.image} alt={item.name} width={120} height={120} />
@@ -56,7 +56,7 @@ export default function Cart(){
              {cartStore.cart.length > 0 && (
                  <motion.div layout >
                 <p>Total : {formatPrice(totalPrice)}</p>
-                
+
                     <button className="py-2 mt-4 bg-teal-700 w-full rounded-md text-white">Checkout</button>
                
                 </motion.div>
