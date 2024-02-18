@@ -8,6 +8,7 @@ import Stripe from "stripe"
 const prisma = new PrismaClient()
 
 export const authOptions = {
+  secret:process.env.NEXT_AUTH_SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
