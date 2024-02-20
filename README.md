@@ -26,7 +26,8 @@ To get started with the project, follow these steps:
 
 bash
 
-    cd nextjs-e-commerce
+    cd ecommerce-nextjs
+    
     npm install
 
     
